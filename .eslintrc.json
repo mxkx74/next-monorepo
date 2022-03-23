@@ -1,0 +1,62 @@
+{
+  "extends": [
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals",
+    "plugin:import/recommended",
+    "standard",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "react/display-name": "off",
+    "@next/next/no-img-element": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-use-before-define": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "no-restricted-syntax": ["error", "TSEnumDeclaration"],
+    "react/prop-types": "off",
+    "react-hooks/exhaustive-deps": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/prefer-interface": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "no-unused-expressions": "off",
+    "@typescript-eslint/consistent-type-assertions": [
+      "warn",
+      {
+        "assertionStyle": "as",
+        "objectLiteralTypeAssertions": "allow-as-parameter"
+      }
+    ],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "indent": "off",
+    "@typescript-eslint/indent": ["error", 2],
+    "import/order": [
+      "warn",
+      {
+        "alphabetize": {
+          "order": "asc"
+        }
+      }
+    ],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "extensions": [
+            ".js",
+            ".jsx",
+            ".ts",
+            ".tsx"
+          ]
+        }
+      }
+    }
+  }
+}
