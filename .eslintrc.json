@@ -1,17 +1,12 @@
 {
   "extends": [
-    "plugin:@next/next/recommended",
-    "next/core-web-vitals",
     "plugin:import/recommended",
     "standard",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "plugin:storybook/recommended"
+    "plugin:@typescript-eslint/recommended"
   ],
   "plugins": ["@typescript-eslint"],
   "rules": {
     "react/display-name": "off",
-    "@next/next/no-img-element": "off",
     "react/react-in-jsx-scope": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": "off",
@@ -45,18 +40,6 @@
           "order": "asc"
         }
       }
-    ],
-    "settings": {
-      "import/resolver": {
-        "node": {
-          "extensions": [
-            ".js",
-            ".jsx",
-            ".ts",
-            ".tsx"
-          ]
-        }
-      }
-    }
+    ]
   }
 }

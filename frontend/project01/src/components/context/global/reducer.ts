@@ -11,7 +11,7 @@ export const reducer = (state: GlobalState, action: GlobalActions) => {
     case 'SET_VALUE':
       return {
         ...state,
-        value: action.payload.value,
+        value: action.payload.value
       };
     default:
       return state;

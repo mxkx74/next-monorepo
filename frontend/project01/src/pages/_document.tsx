@@ -4,14 +4,14 @@ import { ServerStyleSheet } from 'styled-components';
 
 class MyDocument extends Document {
   // styled-componentをnextで使うためのおまじない
-  static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
+  static async getInitialProps (ctx: DocumentContext): Promise<DocumentInitialProps> {
     const sheet = new ServerStyleSheet();
     try {
       const originalRenderPage = ctx.renderPage;
 
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -22,14 +22,14 @@ class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        ),
+        )
       };
     } finally {
       sheet.seal();
     }
   }
 
-  render() {
+  render () {
     return (
       <Html>
         <Head>

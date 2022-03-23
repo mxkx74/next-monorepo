@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "plugin:@next/next/recommended",
+    "next/core-web-vitals",
+    "plugin:storybook/recommended"
+  ],
+  "plugins": ["@typescript-eslint"],
+  "rules": {
+    "@next/next/no-img-element": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
+      }
+    }
+  }
+}
