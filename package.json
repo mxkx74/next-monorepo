@@ -3,8 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "build": "run-p build:*",
+    "build:project01": "yarn workspace project01 build",
+    "build:project02": "yarn workspace project02 build",
+    "dev": "run-p dev:*",
+    "dev:project01": "yarn workspace project01 dev",
+    "dev:project02": "yarn workspace project01 dev",
+    "export": "run-p export:*",
+    "export:project01": "yarn workspace project01 export",
+    "export:project02": "yarn workspace project02 export",
+    "lint": "run-p lint:*",
     "lint:project01": "yarn workspace project01 lint",
-    "dev:project01": "yarn workspace project01 dev"
+    "lint:project02": "yarn workspace project02 lint",
+    "test": "run-p test:*",
+    "test:project01": "yarn workspace project01 test",
+    "test:project02": "yarn workspace project02 test"
   },
   "workspaces": [
     "frontend/**"
